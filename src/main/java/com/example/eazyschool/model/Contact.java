@@ -7,61 +7,9 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-/*
-	Lombok annotations
-
-	@NoArgsConstructor
-	@AllArgsConstructor
-	@RequiredArgsConstructor (create constructor for final fields)
-	@Getter
-	@Setter
-	@ToString
-	@EqualsAndHashCode
-	@Data (equal all annotation except 1 and 2)
-
-	@Slf4j (create logger object)
-
-*/
-
-
-/*
-
-Jakarta.validation.constraints.*
-
-
-@Digits
-@Email
-@Max
-@Min
-@NotBlank
-@NotEmpty
-@NotNull
-@Pattern
-@Size
-
-
-org.hibernate.validator.constraints.*
-
-@CreditCardNumber
-@Length
-@Currency
-@Range
-@URL
-@UniqueElements
-@EAN
-@ISBN
-
- */
-
 
 @Data
 public class Contact {
-
-    /*
-  @NotNull: Checks if a given field is not null but allows empty values & zero elements inside collections.
-  @NotEmpty: Checks if a given field is not null and its size/length is greater than zero.
-  @NotBlank: Checks if a given field is not null and trimmed length is greater than zero.
- */
 
     @NotBlank(message="Name must not be blank.")
     @Size(min=3,message="Name must be atleast 3 characters long.")
