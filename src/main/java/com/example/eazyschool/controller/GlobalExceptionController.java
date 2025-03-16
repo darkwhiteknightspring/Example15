@@ -22,6 +22,14 @@ public class GlobalExceptionController {
         logic if a given exception type is thrown inside the web application.
     */
 
+    /*
+
+        Exception class is the global class of all the exceptions there it will handle all the exception
+        if no specific exception handler is mentioned for that given error.
+
+     */
+
+//    @ExceptionHandler(NullPointerException.class, ArrayIndexOutOfBoundsException.class)
     @ExceptionHandler(Exception.class)
     public ModelAndView exceptionHandler(Exception exception){
         ModelAndView errorPage = new ModelAndView();
